@@ -8,10 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
-//require routing  here???
-
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 //middleware for data parsing
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
