@@ -8,8 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
-require("./routes/apiroutes")(app);
-require("./routes/htmlroutes")(app);
+require("./apiroutes")(app);
+require("./htmlroutes")(app);
 
 //middleware for data parsing
 app.use(express.static("public"));
