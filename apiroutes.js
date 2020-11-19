@@ -2,7 +2,7 @@
 const fs = require("fs");
 module.exports = function(app) {
     app.get("/api/notes", function(req, res){
-        fs.readFile(__dirname,"../db.json", function(err, data) {
+        fs.readFile(__dirname + "/db.json", function(err, data) {
             if (err) throw err;
             const readNotes = JSON.parse(data);
             return res.JSON(readNotes);
@@ -10,4 +10,4 @@ module.exports = function(app) {
     });
 
 
-};
+}
