@@ -1,13 +1,21 @@
 //get request from notes to see the current notes stored in our database
 const fs = require("fs");
-module.exports = function(app) {
-    app.get("/api/notes", function(req, res){
-        fs.readFile(__dirname + "/db.json", function(err, data) {
-            if (err) throw err;
-            const readNotes = JSON.parse(data);
-            return res.JSON(readNotes);
-        });
+const router = require("express").Router();
+
+
+router.get("/api/notes", function (req, res) {
+    fs.readFile("./db.json", "utf8", (error, data) => {
+        data = JSON.parse(data);
+        console.log(data);
+        res.JSON(data);
     });
+});
 
+router.post("/api/notes", function (req, res) {
 
-}
+    fs.readFile("./db.Json", "utf8", function (req, res) {
+        data = JSON.parse(data);
+    })
+})
+
+moduke.exports = router;

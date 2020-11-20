@@ -1,6 +1,7 @@
 //Declare my dependencies 
 const express = require("express");
-
+const htmlRoutes = require("./apiroutes");
+const apiRoutes = require("./htmlroutes");
 //creation of specifically an express server
 const app = express();
 
@@ -8,8 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
-require("./apiroutes")(app);
-require("./htmlroutes")(app);
+app.use(apiRoutes);
+app.use(htmlRoutes);
+
+// require("./apiroutes")(app);
+// require("./htmlroutes")(app);
 
 //middleware for data parsing
 app.use(express.static("public"));
