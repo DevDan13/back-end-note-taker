@@ -11,11 +11,11 @@ router.get("/api/notes", function (req, res) {
     });
 });
 
-router.post("/api/notes", function (req, res) {
+// router.post("/api/notes", function (req, res) {
 
-    fs.readFile("./db.Json", "utf8", function (req, res) {
-        data = JSON.parse(data);
-    })
-})
+//     fs.readFile("./db.Json", "utf8", function (req, res) {
+//         data = JSON.parse(data);
+//     })
+// })
 
-moduke.exports = router;
+module.exports = router;
