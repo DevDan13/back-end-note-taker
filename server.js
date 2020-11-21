@@ -2,7 +2,6 @@
 const express = require("express");
 const apiRoutes = require("./apiroutes");
 const htmlRoutes = require("./htmlroutes");
-const fs = require("fs");
 //creation of specifically an express server
 const app = express();
 
