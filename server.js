@@ -9,25 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
-
-
-// require("./apiroutes")(app);
-// require("./htmlroutes")(app);
-
 //middleware for data parsing
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// app.get('/api/notes', function(req,res){
-//   fs.readFile("./db.json", "utf8", (error, data) => {
-//    data = JSON.parse(data);
-//     console.log(data);
-//     res.json(data);
-// });
-// })
-
+//required routes placed AFTER the static public line to render the css properly to the page.
 app.use(apiRoutes);
 app.use(htmlRoutes);
 
