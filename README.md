@@ -31,7 +31,7 @@ These unique id's are written using the uniqid package.
 npm install uniqid
 ```
 
-Every note is given a random id by uniqid  and it is singled out and not populated into the new array by the .filter method.
+Every note is given a random id by uniqid  and it is singled out and not populated into the new array by the .filter method
 
 ## Demo Link
 
@@ -44,4 +44,4 @@ https://github.com/DevDan13/back-end-note-taker
 ## Demo Gif 
 <br>
 
-![DemoGif](\public\assets\gif\backendnotetaker.gif)
+![DemoGif](public\assets\gif\backendnotetaker.gif)
