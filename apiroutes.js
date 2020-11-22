@@ -34,4 +34,18 @@ router.post("/api/notes", function (req, res) {
     });
 });
 
+router.get("/api/notes/:id", function(req, res){
+    console.log("my param", req.params.id);
+
+    fs.readFile("./db.json", "utf8", function (error, data) {
+        const deleteNote =JSON.parse(data);
+
+        const updateNotes = deleteNote.filter(note => req.params.id !== note.id);
+
+        fs.writeFile("./db.json", JSON.stringify(updateNotes), function(error){
+            res.json(updateNotes);
+        });
+    });
+});
+
 module.exports = router;
