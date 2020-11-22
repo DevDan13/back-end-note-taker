@@ -33,15 +33,11 @@ npm install uniqid
 
 Every note is given a random id by uniqid  and it is singled out and not populated into the new array by the .filter method
 
-## Demo Link
-
-<br>
-
-https://github.com/DevDan13/back-end-note-taker
 
 <br>
 
 ## Demo Gif 
+
 <br>
 
 ![DemoGif](public\assets\gif\backendnotetaker.gif)
