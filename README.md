@@ -40,4 +40,4 @@ Every note is given a random id by uniqid  and it is singled out and not populat
 
 <br>
 
-![DemoGif](public\assets\gif\backendnotetaker.gif)
+![DemoGif](public/assets/gif/backendnotetaker.gif)
